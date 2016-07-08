@@ -21,11 +21,6 @@
     "suggest": {
         "friendsofsymfony/user-bundle": "For integration with FOSUserBundle"
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    },
     "autoload": {
         "psr-4": { "Kolina\\CustomerBundle\\": "" }
     }

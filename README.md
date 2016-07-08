@@ -50,10 +50,10 @@ kolina_customer:
 
 ## 2. CRUD
 #####
-### 2.1 Controller and Methods
+### 2.1 Access the service manager in the controller
 ```sh
 /**
- * Get Customer Service Manager
+ * @return \Kolina\CustomerBundle\Entity\CustomerManager
  */
 private function getCustomerManager()
 {
@@ -61,7 +61,7 @@ private function getCustomerManager()
 }
 ```
 
-### 2.2 Code Sample
+### 2.2 Example usage
 ```sh
 // Create Customer Object
 ...
@@ -72,7 +72,7 @@ $customer
         ->setFirstname('Foo')
         ->setLastname('Bar')
         //... other setter methods - 
-        //... see \Kolina\CustomerBundle\Entity\CustomerInterace
+        //... see \Kolina\CustomerBundle\Entity\CustomerInterface
         ;
 
 $manager->save($customer);

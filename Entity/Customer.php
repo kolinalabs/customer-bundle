@@ -10,6 +10,11 @@ use FOS\UserBundle\Model\UserInterface;
 abstract class Customer implements CustomerInterface
 {
     /**
+     * @var mixed
+     */
+    protected $id;
+
+    /**
      * @var string
      */
     protected $firstname;
@@ -98,6 +103,14 @@ abstract class Customer implements CustomerInterface
      * @var \DateTime
      */
     protected $updatedAt;
+
+    /**
+     * @inheritDoc
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * @inheritDoc

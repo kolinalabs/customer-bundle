@@ -1,0 +1,25 @@
+{
+    "name": "kolinalabs/customer-bundle",
+    "description": "Symfony KolinaCustomerBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claudinei Machado",
+            "email": "claudinei@kolinalabs.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.9",
+        "symfony/framework-bundle": "~2.3|~3.0",
+        "sonata-project/core-bundle": "^3.0",
+        "friendsofsymfony/user-bundle": "~2.0@dev"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "~2.7"
+    },
+    "autoload": {
+        "psr-4": { "Kolina\\CustomerBundle\\": "" }
+    }
+}

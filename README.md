@@ -36,7 +36,7 @@ use Kolina\CustomerBundle\Entity\Customer as AbstractCustomer;
  */
 class Customer extends AbstractCustomer
 {
-    // Other fields and methods
+    // Your custom properties and methods
 }
 ```
 

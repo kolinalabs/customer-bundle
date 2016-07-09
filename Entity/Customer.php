@@ -57,7 +57,7 @@ abstract class Customer implements CustomerInterface
     /**
      * @var string
      */
-    private $country;
+    protected $country;
 
     /**
      * @var string

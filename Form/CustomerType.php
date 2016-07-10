@@ -25,10 +25,12 @@ abstract class CustomerType extends AbstractType
             ->add('mobile')
             ->add('phone')
             ->add('fax')
+            ->add('country')
             ->add('postcode')
             ->add('state')
             ->add('city')
             ->add('district')
+            ->add('street')
             ->add('number')
         ;
 

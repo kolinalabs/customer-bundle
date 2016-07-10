@@ -177,6 +177,17 @@ interface CustomerInterface
     public function getNumber();
 
     /**
+     * @param $complement
+     * @return CustomerInterface
+     */
+    public function setComplement($complement);
+
+    /**
+     * @return string
+     */
+    public function getComplement();
+
+    /**
      * @param UserInterface $user
      * @return CustomerInterface
      */

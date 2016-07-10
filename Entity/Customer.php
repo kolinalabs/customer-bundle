@@ -105,6 +105,11 @@ abstract class Customer implements CustomerInterface
     protected $updatedAt;
 
     /**
+     * @var string
+     */
+    protected $complement;
+
+    /**
      * @inheritDoc
      */
     public function getId()
@@ -382,6 +387,25 @@ abstract class Customer implements CustomerInterface
     {
         return $this->number;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function setComplement($complement)
+    {
+        $this->complement = $complement;
+
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getComplement()
+    {
+        return $this->complement;
+    }
+
 
     /**
      * @inheritDoc

@@ -32,6 +32,7 @@ abstract class CustomerType extends AbstractType
             ->add('district')
             ->add('street')
             ->add('number')
+            ->add('complement')
         ;
 
         if(class_exists('FOS\UserBundle\FOSUserBundle')){

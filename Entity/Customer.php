@@ -9,6 +9,8 @@ use FOS\UserBundle\Model\UserInterface;
  */
 abstract class Customer implements CustomerInterface
 {
+    use UserTrait;
+    
     /**
      * @var mixed
      */
@@ -90,11 +92,6 @@ abstract class Customer implements CustomerInterface
     protected $number;
 
     /**
-     * @var UserInterface
-     */
-    protected $user;
-
-    /**
      * @var \DateTime
      */
     protected $createdAt;
@@ -151,6 +148,14 @@ abstract class Customer implements CustomerInterface
     public function getLastname()
     {
         return $this->lastname;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getName()
+    {
+        return $this->firstname .($this->lastname ? ' ' : ''). $this->lastname;
     }
 
     /**
@@ -415,14 +420,6 @@ abstract class Customer implements CustomerInterface
         $this->user = $user;
 
         return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 
     /**

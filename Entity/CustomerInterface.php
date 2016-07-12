@@ -34,6 +34,11 @@ interface CustomerInterface
     public function getLastname();
 
     /**
+     * @return string
+     */
+    public function getName();
+
+    /**
      * @param $document
      * @return CustomerInterface
      */

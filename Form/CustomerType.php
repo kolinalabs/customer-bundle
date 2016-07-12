@@ -37,16 +37,22 @@ abstract class CustomerType extends AbstractType
 
         if(class_exists('FOS\UserBundle\FOSUserBundle')){
 
-            $customer = $options['data'];
-            
-            $userType = $customer->getId() ? ProfileType::class : RegistrationType::class ;
+            /**
+             * If the form corresponds to a collection element,
+             * can not be the [data] in $options, because collections can be added dynamically.
+             * This note refers to a situation similar to this
+             * http://symfony.com/doc/current/cookbook/form/form_collections.html
+             */
+            $customer = array_key_exists('data', $options) ? $options['data'] : false ;
+
+            $userType = $customer && $customer->getId() ? ProfileType::class : RegistrationType::class ;
 
             $builder
                 ->add('user', $userType)
             ;
         }
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */

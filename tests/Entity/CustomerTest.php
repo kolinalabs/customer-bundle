@@ -1,5 +1,7 @@
 <?php
 
+namespace Kolina\CustomerBundle\Tests\Entity;
+
 use Kolina\CustomerBundle\Entity\Customer;
 use Kolina\CustomerBundle\Entity\CustomerInterface;
 use Kolina\CustomerBundle\Tests\BaseTest;
@@ -58,7 +60,7 @@ class CustomerTest extends BaseTest
      */
     public function testCascadePersistWithFOSUser()
     {
-        $this->markTestIncomplete();
+        $this->markTestSkipped();
         if (class_exists('\FOS\UserBundle\Model\User')) {
             $user = $this->createUser('cascade');
 

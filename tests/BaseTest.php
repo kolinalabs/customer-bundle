@@ -1,6 +1,6 @@
 <?php
 
-namespace Kolina\CustomerBundle\tests;
+namespace Kolina\CustomerBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

@@ -27,7 +27,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Kolina\\CustomerBundle\\Tests": "tests"
+      "Kolina\\CustomerBundle\\Tests\\": "tests"
     }
   },
   "scripts": {

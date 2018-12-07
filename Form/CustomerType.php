@@ -35,7 +35,7 @@ abstract class CustomerType extends AbstractType
             ->add('complement')
         ;
 
-        if(class_exists('FOS\UserBundle\FOSUserBundle')){
+        if (class_exists('FOS\UserBundle\FOSUserBundle')) {
 
             /**
              * If the form corresponds to a collection element,

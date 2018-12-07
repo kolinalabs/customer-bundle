@@ -1,28 +1,37 @@
 {
-    "name": "kolinalabs/customer-bundle",
-    "description": "Symfony KolinaCustomerBundle",
-    "type": "symfony-bundle",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Claudinei Machado",
-            "email": "claudinei@kolinalabs.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.6",
-        "symfony/framework-bundle": "~2.3|~3.0",
-        "sonata-project/core-bundle": "^3.0",
-        "friendsofsymfony/user-bundle": "^2.0"
-    },
-    "require-dev": {
-        "sensio/generator-bundle": "~3.0",
-        "symfony/phpunit-bridge": "~2.7"
-    },
-    "suggest": {
-        "friendsofsymfony/user-bundle": "For integration with FOSUserBundle"
-    },
-    "autoload": {
-        "psr-4": { "Kolina\\CustomerBundle\\": "" }
+  "name": "kolinalabs/customer-bundle",
+  "description": "Symfony KolinaCustomerBundle",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Claudinei Machado",
+      "email": "claudinei@kolinalabs.com"
     }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "symfony/framework-bundle": "~2.3|~3.0",
+    "sonata-project/core-bundle": "^3.0",
+    "friendsofsymfony/user-bundle": "^2.0"
+  },
+  "require-dev": {
+    "sensio/generator-bundle": "~3.0",
+    "symfony/phpunit-bridge": "^4.2",
+    "phpunit/phpunit": "~5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kolina\\CustomerBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  }
 }

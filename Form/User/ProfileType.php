@@ -14,5 +14,4 @@ class ProfileType extends AbstractType
     {
         return ProfileFormType::class;
     }
-
 }

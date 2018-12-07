@@ -6,7 +6,7 @@ Simplified management clients, extensible and integrated with FOSUserBundle
 ##
 #### 1.1 Download KolinaCustomerBundle using composer
 ```sh
-$ composer require kolinalabs/customer-bundle "dev-master"
+$ composer require kolinalabs/customer-bundle
 ```
 After downloading the package
 #### 1.2 Enable the bundle

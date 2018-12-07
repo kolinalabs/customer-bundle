@@ -2,6 +2,6 @@
 
 namespace Kolina\CustomerBundle\Entity;
 
-interface CustomerManagerInterface{
-    
+interface CustomerManagerInterface
+{
 }

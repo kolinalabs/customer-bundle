@@ -15,7 +15,6 @@ class CustomerTest extends BaseTest
         $this->assertInstanceOf(CustomerInterface::class, $customer);
 
         $this->assertEquals('Claudinei', $customer->getFirstname());
-
     }
 
     public function testCompleteManagerScenario()
@@ -25,7 +24,7 @@ class CustomerTest extends BaseTest
         $customers = $manager->findAll();
         $lastId = 0;
 
-        if(count($customers)) {
+        if (count($customers)) {
             $lastCustomer = $customers[0];
             $lastId = $lastCustomer->getId();
         }
@@ -35,8 +34,7 @@ class CustomerTest extends BaseTest
         $this->assertInstanceOf(CustomerInterface::class, $customer);
 
         // Test Fluent Setters
-        foreach ($this->getDataValues() as $property => $value){
-
+        foreach ($this->getDataValues() as $property => $value) {
             $setter = 'set' . ucfirst(strtolower($property));
             $getter = 'get' . ucfirst(strtolower($property));
 
@@ -50,8 +48,7 @@ class CustomerTest extends BaseTest
 
     public function testCascadePersistWithFOSUser()
     {
-        if(class_exists('\FOS\UserBundle\Model\User')){
-
+        if (class_exists('\FOS\UserBundle\Model\User')) {
             $user = $this->createUser('cascade');
 
             $customer = $this->createCustomer();
@@ -77,8 +74,7 @@ class CustomerTest extends BaseTest
     {
         $customer = $this->getMock(Customer::class);
 
-        foreach($this->getPropertySets() as $propertySet){
-
+        foreach ($this->getPropertySets() as $propertySet) {
             $method = $propertySet['method'];
             $return = $propertySet['will'];
 
@@ -95,8 +91,7 @@ class CustomerTest extends BaseTest
     {
         $propertySets = [];
 
-        foreach ($this->getDataValues() as $property => $value){
-
+        foreach ($this->getDataValues() as $property => $value) {
             $propertySets[] = [
                 'method' => 'get'.ucfirst(strtolower($property)),
                 'will' => $value
@@ -142,15 +137,16 @@ class CustomerTest extends BaseTest
 
         $user = $manager->createUser();
 
-        $base = md5( $prefix . uniqid(time()));
+        $base = md5($prefix . uniqid(time()));
 
-        $user->setEmail( $base . '@kolinalabs.com')
+        $user->setEmail($base . '@kolinalabs.com')
             ->setUsername(ucfirst($base))
             ->setPlainPassword($base)
             ->setEnabled(true);
 
-        if($persist)
+        if ($persist) {
             $manager->updateUser($user);
+        }
 
         return $user;
     }
@@ -161,15 +157,15 @@ class CustomerTest extends BaseTest
 
         $customer = $manager->create();
 
-        foreach ($this->getDataValues() as $property => $value){
-
+        foreach ($this->getDataValues() as $property => $value) {
             $setter = 'set' . ucfirst(strtolower($property));
 
             $customer->$setter($value);
         }
 
-        if($persist)
+        if ($persist) {
             $manager->save($customer);
+        }
 
         return $customer;
     }

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Claudinei
- * Date: 03/07/2016
- * Time: 23:38
- */
 
 namespace Kolina\CustomerBundle\Tests;
 
